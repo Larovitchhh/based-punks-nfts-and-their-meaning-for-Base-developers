@@ -1,0 +1,27 @@
+# Based Punks Overview
+
+## What Are Based Punks?
+Based Punks is a collection of 5,000 unique, algorithmically generated 24x24 pixel art NFTs on the **Base blockchain**, an Ethereum Layer 2 solution. Launched in April 2024 by creators @traf and @displaydriver, it draws inspiration from CryptoPunks but leverages Base's low-cost, scalable infrastructure.
+
+### Key Stats (May 2025)
+- **Total Supply**: 4,999 NFTs
+- **Floor Price**: 0.1293 ETH (~$232)
+- **Market Cap**: ~$1.16M
+- **Unique Owners**: 2,535
+- **Trading Platform**: OpenSea Base
+- **Source**: Forbes, CoinGecko
+
+## Significance for Base
+- **Showcase of Base's Capabilities**: Based Punks demonstrates how Base's low gas fees and high throughput enable affordable NFT minting and trading.
+- **Community Engagement**: Supported by Base Builder Grants, it highlights Base's commitment to fostering NFT projects.
+- **Developer Opportunities**: The collection's success encourages developers to build dApps, marketplaces, or tools for Base's NFT ecosystem.
+
+## Technical Details
+- **Blockchain**: Base (Ethereum Layer 2)
+- **Smart Contract Standard**: Likely ERC-721 (based on typical NFT collections)
+- **Metadata**: Stored off-chain, accessible via APIs (e.g., OpenSea)
+- **Minting**: Public mint at ~0.0037 ETH (historical data from related projects like Based Ponks)
+
+## Learn More
+- [Based Punks on OpenSea](https://opensea.io/collection/based-punks)
+- [Base Builder Grants Announcement](https://x.com/base/status/1786488623055126579)
