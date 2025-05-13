@@ -1,0 +1,14 @@
+Write Additional Docs:
+base-blockchain.md: Explain Base’s architecture, EVM compatibility, and benefits for NFT development.
+
+nft-development-guide.md: Step-by-step guide to building an NFT project on Base, including smart contract design, metadata hosting, and frontend integration.
+
+resources.md: List tools like Hardhat, ethers.js, Base docs, and OpenSea APIs.
+
+Link to External Resources:
+Base Documentation: docs.base.org
+
+Based Punks on OpenSea: opensea.io/collection/based-punks
+
+Base Builder Grants: X post by @base
+
