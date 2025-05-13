@@ -1,0 +1,47 @@
+
+##### 2. `contracts/BasedPunksNFT.sol`
+An example ERC-721 contract for an NFT collection similar to Based Punks.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
+
+contract BasedPunksNFT is ERC721, Ownable {
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+
+    uint256 public constant MAX_SUPPLY = 5000;
+    uint256 public constant MINT_PRICE = 0.0037 ether; // Example mint price
+    string private _baseTokenURI;
+
+    constructor() ERC721("BasedPunks", "BP") {
+        _baseTokenURI = "https://api.basedpunks.com/metadata/"; // Example metadata URI
+    }
+
+    function mintNFT(address recipient) public payable returns (uint256) {
+        require(_tokenIds.current() < MAX_SUPPLY, "Max supply reached");
+        require(msg.value >= MINT_PRICE, "Insufficient ETH");
+
+        _tokenIds.increment();
+        uint256 newTokenId = _tokenIds.current();
+        _safeMint(recipient, newTokenId);
+
+        return newTokenId;
+    }
+
+    function _baseURI() internal view override returns (string memory) {
+        return _baseTokenURI;
+    }
+
+    function setBaseURI(string memory baseURI) public onlyOwner {
+        _baseTokenURI = baseURI;
+    }
+
+    function withdraw() public onlyOwner {
+        payable(owner()).transfer(address(this).balance);
+    }
+}
